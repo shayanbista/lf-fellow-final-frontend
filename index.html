@@ -70,7 +70,7 @@
             </ul>
           </div>
         </nav>
-
+        <!-- user-profile -->
         <section class="user-information">
           <div>
             <div class="user-information__profile">
@@ -308,7 +308,7 @@
           </div>
         </div>
       </div>
-
+      <!-- application-section -->
       <div class="application-container">
         <div class="application-wrapper">
           <h1 class="application-header">Application and Tools</h1>
@@ -436,7 +436,7 @@
           const currentTheme = localStorage.getItem("theme") || null;
 
           const applyDarkMode = () => {
-            console.log("Applying dark mode"); // Debug
+            console.log("Applying dark mode");
             document.body.classList.add("dark");
             document.querySelector(".homepage").classList.add("dark");
             document
@@ -445,11 +445,11 @@
               )
               .forEach((el) => el.classList.add("dark"));
             lightmode.src = "images/light.png";
-            nightmode.src = "images/light.png"; // Sync mobile icon with desktop icon
+            nightmode.src = "images/light.png";
           };
 
           const removeDarkMode = () => {
-            console.log("Removing dark mode"); // Debug
+            console.log("Removing dark mode");
             document.body.classList.remove("dark");
             document.querySelector(".homepage").classList.remove("dark");
             document
@@ -458,7 +458,7 @@
               )
               .forEach((el) => el.classList.remove("dark"));
             lightmode.src = "images/night.png";
-            nightmode.src = "images/night.png"; // Sync mobile icon with desktop icon
+            nightmode.src = "images/night.png";
           };
 
           if (currentTheme === "dark") {
@@ -468,7 +468,7 @@
           }
 
           lightmode.addEventListener("click", () => {
-            console.log("Light mode button clicked"); // Debug
+            console.log("Light mode button clicked");
             if (document.body.classList.contains("dark")) {
               removeDarkMode();
               localStorage.setItem("theme", "light");
@@ -479,7 +479,7 @@
           });
 
           nightmode.addEventListener("click", () => {
-            console.log("Night mode button clicked"); // Debug
+            console.log("Night mode button clicked");
             if (document.body.classList.contains("dark")) {
               removeDarkMode();
               localStorage.setItem("theme", "light");

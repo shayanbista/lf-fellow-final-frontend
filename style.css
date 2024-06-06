@@ -162,6 +162,7 @@ body.dark {
   display: flex;
   justify-content: space-evenly;
   align-items: flex-end;
+  margin-top: 1.2 rem;
 }
 
 .imagewrapper--media {
@@ -351,7 +352,7 @@ body.dark .footer .btn--footer {
   color: #000000;
 }
 
-.container--userprojects {
+.container {
   width: 100%;
   background-color: #f4f6fb;
 }
@@ -367,12 +368,22 @@ body.dark .footer .btn--footer {
   align-items: center;
 }
 
+.container__wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 .application-container {
   background-color: #FFFFFF;
 }
 
 .container-application__header {
   text-align: center;
+}
+
+.container__wrapper {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .wrapper {
@@ -386,6 +397,11 @@ body.dark .footer .btn--footer {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+.container__wrapper {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .application-container {
@@ -469,16 +485,15 @@ body.dark .footer .btn--footer {
   margin-top: 1.5rem;
   align-items: baseline;
 }
-
-.user-information__cv {
-  display: flex;
-}
-
 .footer-wrapper {
   padding: 81px 146px 81px 146px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.user-information__cv {
+  display: flex;
 }
 
 .custom-wrapper {
@@ -701,9 +716,6 @@ body.dark .footer .btn--footer {
     padding: 10px;
     margin: 0 auto;
     padding-bottom: 126px;
-  }
-  .card-project__header {
-    color: black;
   }
   .btn--event {
     display: none;

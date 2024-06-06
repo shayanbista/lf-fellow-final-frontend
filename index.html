@@ -27,7 +27,7 @@
 
   <body>
     <!-- main-section -->
-    <div class="main">
+    <main class="main">
       <div class="homepage">
         <nav>
           <div class="homepage__navigation">
@@ -120,7 +120,7 @@
       </div>
 
       <!-- projects-section -->
-      <div class="container container--userprojects">
+      <section class="container">
         <div class="wrapper wrapper--project">
           <div class="card card-project">
             <div class="btn btn--market">
@@ -190,9 +190,10 @@
             <img src="images/tukuimage.png" alt="Tuku-image" />
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="container container--userprojects">
+      <!-- projects-section -->
+      <section class="container">
         <div class="wrapper wrapper--project">
           <div class="card card-project">
             <div class="btn btn--event">
@@ -246,9 +247,11 @@
             <img src="images/eventimage.png" alt="event-image" />
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="container container--userprojects">
+      <!-- projects-section -->
+
+      <section class="container">
         <div class="wrapper wrapper--project">
           <div class="card card-project">
             <div class="btn btn--event">
@@ -307,9 +310,10 @@
             />
           </div>
         </div>
-      </div>
+      </section>
+
       <!-- application-section -->
-      <div class="application-container">
+      <section class="application-container">
         <div class="application-wrapper">
           <h1 class="application-header">Application and Tools</h1>
 
@@ -324,6 +328,7 @@
                 dapat bakerja dengan Tim.
               </p>
             </div>
+
             <div class="tool">
               <div class="imagewrapper imagewrapper--event imagewrapper--small">
                 <img src="images/whim.svg" alt="figma" />
@@ -391,7 +396,7 @@
             Load More Applications and Tools
           </button>
         </div>
-      </div>
+      </section>
       <footer class="footer">
         <div class="footer-wrapper">
           <div class="footer-sectionleft">
@@ -425,71 +430,8 @@
           <button class="btn btn--footer desktop-btn">SAY HELLO</button>
         </div>
       </footer>
-      <script>
-        document.addEventListener("DOMContentLoaded", (event) => {
-          const lightmode = document.querySelector(
-            ".homepage__navigation__lightmode"
-          );
-          const nightmode = document.querySelector(
-            ".homepage__navigation-night"
-          );
-          const currentTheme = localStorage.getItem("theme") || null;
 
-          const applyDarkMode = () => {
-            console.log("Applying dark mode");
-            document.body.classList.add("dark");
-            document.querySelector(".homepage").classList.add("dark");
-            document
-              .querySelectorAll(
-                ".card-project, .user-information__role h1, .user-information__description p, .user-information__header, .application-container, .application-wrapper, .footer, .wrapper--project"
-              )
-              .forEach((el) => el.classList.add("dark"));
-            lightmode.src = "images/light.png";
-            nightmode.src = "images/light.png";
-          };
-
-          const removeDarkMode = () => {
-            console.log("Removing dark mode");
-            document.body.classList.remove("dark");
-            document.querySelector(".homepage").classList.remove("dark");
-            document
-              .querySelectorAll(
-                ".card-project, .user-information__role h1, .user-information__description p, .user-information__header, .application-container, .application-wrapper, .footer, .wrapper--project"
-              )
-              .forEach((el) => el.classList.remove("dark"));
-            lightmode.src = "images/night.png";
-            nightmode.src = "images/night.png";
-          };
-
-          if (currentTheme === "dark") {
-            applyDarkMode();
-          } else {
-            removeDarkMode();
-          }
-
-          lightmode.addEventListener("click", () => {
-            console.log("Light mode button clicked");
-            if (document.body.classList.contains("dark")) {
-              removeDarkMode();
-              localStorage.setItem("theme", "light");
-            } else {
-              applyDarkMode();
-              localStorage.setItem("theme", "dark");
-            }
-          });
-
-          nightmode.addEventListener("click", () => {
-            console.log("Night mode button clicked");
-            if (document.body.classList.contains("dark")) {
-              removeDarkMode();
-              localStorage.setItem("theme", "light");
-            } else {
-              applyDarkMode();
-              localStorage.setItem("theme", "dark");
-            }
-          });
-        });
-      </script>
-    </div>
+      <script src="index.js"></script>
+    </main>
   </body>
 </html>

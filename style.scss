@@ -209,6 +209,7 @@ body.dark {
       display: flex;
       justify-content: space-evenly;
       align-items: flex-end;
+      margin-top: 1.2 rem;
       
     }
 }
@@ -285,6 +286,7 @@ body.dark {
  }
 
 }
+
  .medica-total {
    display: none;
  }
@@ -406,10 +408,13 @@ body.dark .footer .btn--footer {
 }
 
 .container{
-  &--userprojects{
     width: 100%;
     background-color:#f4f6fb;
-  };
+
+  // &--userprojects{
+  //   width: 100%;
+  //   background-color:#f4f6fb;
+  // };
 
   &--tools{
     background-color: green;
@@ -425,6 +430,12 @@ body.dark .footer .btn--footer {
   }
   }
 
+.container__wrapper{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+   
 .application-container{
     background-color: #FFFFFF;
   }
@@ -433,6 +444,11 @@ body.dark .footer .btn--footer {
     &__header{
       text-align: center;
     }
+  }
+
+  .container__wrapper{
+  display: flex;
+  justify-content: space-evenly;
   }
   
 
@@ -443,12 +459,19 @@ body.dark .footer .btn--footer {
     display: flex;
     justify-content: space-evenly;
   }
+  
   &--footer{
     display: flex;
     align-items: center;
     justify-content: space-around;
 
   }
+}
+
+.container__wrapper{
+    display: flex;
+    justify-content: space-evenly
+
 }
 
 .application-container{
@@ -463,6 +486,7 @@ body.dark .footer .btn--footer {
 
 
 .card{
+
   &-project{
     display: flex;
     background-color: #FFFFFF;
@@ -550,19 +574,18 @@ body.dark .footer .btn--footer {
     margin-top: 1.5rem;
     align-items: baseline;
   }
+  &-wrapper{
+      padding: $default-padding;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
 }
 
 .user-information__cv{
    display: flex;
  }
 
-
-.footer-wrapper {
-  padding: $default-padding;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 .custom-wrapper {
   position: relative;
@@ -782,6 +805,7 @@ body.dark .footer .btn--footer {
     }
   }
   }
+  
 
 
   .card{
@@ -827,13 +851,9 @@ body.dark .footer .btn--footer {
   justify-content: center;
   text-align: left; 
   padding: 10px;
-  //max-width: 600px;
   margin: 0 auto; 
   padding-bottom: 126px;
 
- }
- .card-project__header{
-  color: black;
  }
 
  .btn--event {
